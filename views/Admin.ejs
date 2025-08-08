@@ -1,0 +1,72 @@
+
+<h1>Booking Admin Panel</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Guests</th>
+            <th>Hotel</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Room Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% bookings.forEach(booking => { %>
+            <tr>
+                <td><%= booking._id %></td>
+                <td><%= booking.checkin %></td>
+                <td><%= booking.checkout %></td>
+                <td><%= booking.guests %></td>
+                <td><%= booking.hotel %></td>
+                <td><%= booking.name %></td>
+                <td><%= booking.email %></td>
+                <td><%= booking.roominfo %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<h1>Booking Room directly</h1><br>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>checkin</th>
+            <th>checkout</th>
+            <th>guests</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% bookings.forEach(book =>{%>
+        <tr>
+            <td><%= book.checkin %></td>
+            <td><%= book.checkout %></td>
+            <td><%= book.guests %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+
+</table>
+
+<h1>Contact Information</h1>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% bookings.forEach(info => { %>
+            <tr>
+                <td><%= info.name %></td>
+                <td><%= info.email %></td>
+                <td><%= info.phone %></td>
+                <td><%= info.message %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
