@@ -6,7 +6,7 @@ route.get("/",(req,res)=>{
     res.render("Daseboard")
 })
 route.get("/booking", (req, res) => {
-    res.render("Bookingform",{books});
+    res.render("Bookingform");
 });
 
 route.get("/booking", async (req, res) => {
